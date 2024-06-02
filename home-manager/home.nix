@@ -96,9 +96,9 @@
 
   xsession = {
     enable = true;
-  #  windowManager = {
-  #    i3 = {
-  #      enable = true;
+    windowManager = {
+      i3 = {
+        enable = true;
   #      config = {
   #        keybindings = {
   #          # Add your keybindings here
@@ -108,8 +108,8 @@
   #        feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
   #      '';
   #      };
-  #    };
-  #  };
+      };
+    };
   };
   # Set the desktop background
   #xsession.windowManager.i3.extraSessionCommands = ''
