@@ -49,6 +49,7 @@
                 i3status
                 dmenu
                 feh
+                lshw
               ];
   };
 
