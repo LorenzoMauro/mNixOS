@@ -1,3 +1,7 @@
+#before running this makefile, enter a shell
+# nix-shell -p gnumake git home-manager
+
+
 # Define variables
 REPO_DIR := $(CURDIR)
 FLAKE := .#nixos
