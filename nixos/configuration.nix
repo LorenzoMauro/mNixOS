@@ -86,6 +86,7 @@
 
   services = {
     xserver = {
+      enable = true;
       layout = "us";
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
