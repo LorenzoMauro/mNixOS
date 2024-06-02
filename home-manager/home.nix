@@ -93,6 +93,7 @@
 
   # Add packages
   home.packages = with pkgs; [
+    git
     gnumake
     neovim
     i3
