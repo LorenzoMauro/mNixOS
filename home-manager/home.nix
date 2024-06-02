@@ -45,7 +45,6 @@
     packages = with pkgs; [
                 git
                 gnumake
-                neovim
                 i3
                 i3status
                 dmenu
