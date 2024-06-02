@@ -95,16 +95,6 @@
   #};
 
   #display manager
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      lightdm = {
-        enable = true;
-        defaultSession = "none+i3";
-      };
-    };
-  };
-
   xsession = {
     enable = true;
     displayManager = {
