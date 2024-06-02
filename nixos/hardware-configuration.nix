@@ -11,7 +11,6 @@
     extraModulePackages = [];
 
     loader = {
-      systemd-boot.enable = true;
       grub = {
         enable = true;
         device = "/dev/sda";
