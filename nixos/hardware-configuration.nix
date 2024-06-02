@@ -9,7 +9,7 @@
     };
     kernelModules = [];
     extraModulePackages = [];
-
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       grub = {
         enable = true;
