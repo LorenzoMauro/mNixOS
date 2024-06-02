@@ -44,9 +44,6 @@
     homeDirectory = "/home/lorenzo";
   };
 
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
@@ -57,4 +54,49 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
+
+# Enable Neovim
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    extraConfig = ''
+      set number
+      syntax on
+      set tabstop=4
+      set shiftwidth=4
+      set expandtab
+      set autoindent
+    '';
+  };
+
+  # Enable i3 window manager
+  services.xserver = {
+    enable = true;
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [ i3status dmenu ];
+      config = {
+        keybindings = {
+          # Add your keybindings here
+        };
+        statusCommand = "${pkgs.i3status}/bin/i3status";
+      };
+    };
+    displayManager.gdm.enable = true;
+  };
+
+  # Set the desktop background
+  xsession.windowManager.i3.extraSessionCommands = ''
+    feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
+  '';
+
+  # Add packages
+  home.packages = with pkgs; [
+    neovim
+    i3
+    i3status
+    dmenu
+    feh
+  ];
 }
