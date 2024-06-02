@@ -102,6 +102,17 @@
     getty.autologinUser = "lorenzo";
   };
 
+   # Define the list of packages to be installed
+  environment.systemPackages = with pkgs; [
+    git
+    gnumake
+    neovim
+    i3
+    i3status
+    dmenu
+    feh
+  ];
+  
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
