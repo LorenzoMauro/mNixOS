@@ -103,7 +103,7 @@
   #        keybindings = {
   #          # Add your keybindings here
   #      };
-  #      statusCommand = "${pkgs.i3status}/bin/i3status";
+        statusCommand = "${pkgs.i3status}/bin/i3status";
   #      extraSessionCommands = ''
   #        feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
   #      '';
