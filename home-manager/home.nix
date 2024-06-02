@@ -94,8 +94,8 @@
   #  displayManager.gdm.enable = true;
   #};
 
-  #xsession = {
-  #  enable = true;
+  xsession = {
+    enable = true;
   #  windowManager = {
   #    i3 = {
   #      enable = true;
@@ -110,7 +110,7 @@
   #      };
   #    };
   #  };
-  #};
+  };
   # Set the desktop background
   #xsession.windowManager.i3.extraSessionCommands = ''
   #  feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
