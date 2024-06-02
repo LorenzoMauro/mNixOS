@@ -105,6 +105,17 @@
     windowManager = {
       i3 = {
         enable = true;
+
+        package = pkgs.i3-gaps;
+        config = {
+          #modifier = "Mod4";
+          #bars = [ ]; # use polybar instead
+          gaps = {
+            inner = 12;
+            outer = 5;
+            smartGaps = true;
+            smartBorders = "off";
+          };
   #      config = {
   #        keybindings = {
   #          # Add your keybindings here

@@ -89,6 +89,8 @@
       layout = "us";
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
+      displayManager.gdm.enable = true;
+      windowManager.i3.enable = true;
     };
 
     getty.autologinUser = "lorenzo";
