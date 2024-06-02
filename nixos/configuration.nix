@@ -91,8 +91,9 @@
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
       displayManager = {
-        lightdm = {
+        gdm = {
           enable = true;
+          wayland = false;
         };
         defaultSession = "none+i3";
       };
@@ -112,7 +113,7 @@
     dmenu
     feh
   ];
-
+  
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
