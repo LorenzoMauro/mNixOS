@@ -97,11 +97,6 @@
   #display manager
   xsession = {
     enable = true;
-    displayManager = {
-      gdm = {
-        enable = true;
-      };
-    };
     windowManager = {
       i3 = {
         enable = true;
