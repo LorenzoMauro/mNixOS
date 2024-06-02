@@ -111,6 +111,9 @@
             smartBorders = "off";
           };
         };
+        extraSessionCommands = ''
+          feh --bg-fill /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
+        '';
       };
     };
   };

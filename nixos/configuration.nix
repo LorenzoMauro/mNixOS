@@ -91,6 +91,7 @@
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
       displayManager.gdm.enable = true;
+      displayManager.default = "gdm";
       windowManager.i3.enable = true;
     };
 
