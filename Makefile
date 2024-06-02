@@ -1,6 +1,6 @@
 # Define variables
 REPO_DIR := $(CURDIR)
-FLAKE := $(REPO_DIR)/#nixos
+FLAKE := .#nixos
 
 # Default target
 all: update-system
