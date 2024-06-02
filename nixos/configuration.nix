@@ -63,7 +63,7 @@
 
   # TODO: Set your hostname
   networking ={
-    hostName = "your-hostname";
+    hostName = "nixos";
     networkmanager.enable = true;
   };
 
