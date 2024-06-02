@@ -11,6 +11,8 @@ update-system:
 	cd $(REPO_DIR) && git pull
 	@echo "Rebuilding system configuration..."
 	cd $(REPO_DIR) && sudo nixos-rebuild switch --flake $(FLAKE)
+	@echo "Configuring Home Manager..."
+	sudo -u $(USER) home-manager switch
 	@echo "Rebooting system..."
 	sudo reboot now
 

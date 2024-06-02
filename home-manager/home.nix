@@ -42,6 +42,15 @@
   home = {
     username = "lorenzo";
     homeDirectory = "/home/lorenzo";
+    packages = with pkgs; [
+                git
+                gnumake
+                neovim
+                i3
+                i3status
+                dmenu
+                feh
+              ];
   };
 
 
@@ -90,15 +99,4 @@
   xsession.windowManager.i3.extraSessionCommands = ''
     feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
   '';
-
-  # Add packages
-  home.packages = with pkgs; [
-    git
-    gnumake
-    neovim
-    i3
-    i3status
-    dmenu
-    feh
-  ];
 }
