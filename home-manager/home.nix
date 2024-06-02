@@ -94,23 +94,23 @@
   #  displayManager.gdm.enable = true;
   #};
 
-  xsession = {
-    enable = true;
-    windowManager = {
-      i3 = {
-        enable = true;
-        config = {
-          keybindings = {
-            # Add your keybindings here
-        };
-        statusCommand = "${pkgs.i3status}/bin/i3status";
-        extraSessionCommands = ''
-          feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
-        '';
-        };
-      };
-    };
-  };
+  #xsession = {
+  #  enable = true;
+  #  windowManager = {
+  #    i3 = {
+  #      enable = true;
+  #      config = {
+  #        keybindings = {
+  #          # Add your keybindings here
+  #      };
+  #      statusCommand = "${pkgs.i3status}/bin/i3status";
+  #      extraSessionCommands = ''
+  #        feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
+  #      '';
+  #      };
+  #    };
+  #  };
+  #};
   # Set the desktop background
   #xsession.windowManager.i3.extraSessionCommands = ''
   #  feh --bg-scale /home/lorenzo/mNixOS/home-manager/yutian-li-render-image-a5.jpeg
