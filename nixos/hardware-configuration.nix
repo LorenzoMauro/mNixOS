@@ -1,12 +1,30 @@
 # This is just an example, you should generate yours with nixos-generate-config and put it in here.
 {
-  boot.loader.systemd-boot.enable = true;
+  boot = {
+    initrd = {
+      availableKernelModules = [ "ata_piix" "mptspi" "uhci_hcd" "ahci" "sd_mod" "sr_mod"];
+      kernelModules = [];
+    };
+    kernelModules = [];
+    extraModulePackages = [];
+
+    loader = {
+      systemd-boot.enable = true;
+      grub = {
+        enable = true;
+        device = "/dev/sda";
+        useOSProber = true;
+      };
+    };
+  };
 
   fileSystems."/" = {
-    device = "/dev/sda1";
+    device = "/dev/disk/by-uuid/d143861b-11c8-4282-b01d-acba013f83c0";
     fsType = "ext4";
   };
 
-  # Set your system kind (needed for flakes)
-  nixpkgs.hostPlatform = "x86_64-linux";
+  swapDevices = [];
+
+  networking.useDHCP = lib.mkDefualt true;
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
