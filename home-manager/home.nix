@@ -99,7 +99,6 @@
     windowManager = {
       i3 = {
         enable = true;
-        extraPackages = with pkgs; [ i3status dmenu feh ];
         config = {
           keybindings = {
             # Add your keybindings here
