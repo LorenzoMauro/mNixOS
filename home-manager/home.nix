@@ -80,20 +80,20 @@
   };
 
   # Enable i3 window manager
-  services.xserver = {
-    enable = true;
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [ i3status dmenu ];
-      config = {
-        keybindings = {
-          # Add your keybindings here
-        };
-        statusCommand = "${pkgs.i3status}/bin/i3status";
-      };
-    };
-    displayManager.gdm.enable = true;
-  };
+  #services.xserver = {
+  #  enable = true;
+  #  windowManager.i3 = {
+  #    enable = true;
+  #    extraPackages = with pkgs; [ i3status dmenu ];
+  #    config = {
+  #      keybindings = {
+  #        # Add your keybindings here
+  #      };
+  #      statusCommand = "${pkgs.i3status}/bin/i3status";
+  #    };
+  #  };
+  #  displayManager.gdm.enable = true;
+  #};
 
   # Set the desktop background
   xsession.windowManager.i3.extraSessionCommands = ''
