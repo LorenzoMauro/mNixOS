@@ -91,7 +91,7 @@
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
       displayManager.sdm.enable = true;
-      displayManager.i3.enable = true;
+      windowManager.i3.enable = true;
     };
     getty.autologinUser = "lorenzo";
   };
