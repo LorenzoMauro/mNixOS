@@ -12,7 +12,7 @@ update-system:
 	@echo "Rebuilding system configuration..."
 	cd $(REPO_DIR) && sudo nixos-rebuild switch --flake $(FLAKE)
 	@echo "Configuring Home Manager..."
-	sudo -u $(USER) home-manager switch
+	sudo home-manager --flake .#lorenzo@nixos
 	@echo "Rebooting system..."
 	sudo reboot now
 
