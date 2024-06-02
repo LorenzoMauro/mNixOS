@@ -90,7 +90,12 @@
       layout = "us";
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
-      displayManager.gdm.enable = true;
+      displayManager = {
+        gdm = {
+          enable = true;
+        };
+        defaultSession = "none+i3";
+      };
       windowManager.i3.enable = true;
     };
 
