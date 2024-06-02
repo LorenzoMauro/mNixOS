@@ -90,16 +90,9 @@
       layout = "us";
       # also add nvidia 
       videoDrivers = [ "nvidia" ];
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = false;
-        };
-        defaultSession = "none+i3";
-      };
-      windowManager.i3.enable = true;
+      displayManager.sdm.enable = true;
+      displayManager.i3.enable = true;
     };
-
     getty.autologinUser = "lorenzo";
   };
 
