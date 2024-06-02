@@ -25,6 +25,6 @@
 
   swapDevices = [];
 
-  networking.useDHCP = lib.mkDefualt true;
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  networking.useDHCP = true;
+  nixpkgs.hostPlatform = "x86_64-linux";
 }
