@@ -115,6 +115,7 @@
             smartGaps = true;
             smartBorders = "off";
           };
+        };
       };
     };
   };
